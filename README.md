@@ -18,8 +18,8 @@ If your organization uses [Azure Active Directory](https://azure.microsoft.com) 
 Install the command ( a wrapper that runs a dockerized command) in a folder in your path. It could be /usr/local/bin as shown below:
 
 ```SHELL
-sudo curl -o /usr/local/bin/aws-azure-login https://raw.githubusercontent.com/searchmetrics/aws-azure-login/master/docker-launch-alpine.sh
-sudo chmod o+x /usr/local/bin/aws-azure-login
+curl -sq https://raw.githubusercontent.com/searchmetrics/public_gists/master/installers/install.sh \
+     | bash -s aws_azure_login
 ```
 
 This script is basically a wrapper for running Docker image has been built with aws-azure-login preinstalled. You can also simply  run the command with a volume mounted to your AWS configuration directory.
